@@ -1,41 +1,59 @@
 {
-  "name": "server",
-  "version": "1.0.0",
-  "description": "A Full Stack Todo App",
-  "main": "server.js",
-  "scripts": {
-    "client-install": "npm install --prefix client",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "concurrently \" npm run server \" \" npm run client\" ",
-    "server": "nodemon server",
-    "client": "cd tods && npm install && npm start",
-    "dev": "concurrently \" npm run server \" \" npm run client\" "
-  },
-  "author": "Abdul Wasey",
-  "license": "ISC",
+  "name": "tods",
+  "version": "0.1.0",
+  "private": true,
   "dependencies": {
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.4.1",
+    "@testing-library/user-event": "^7.2.1",
+    "array-move": "^2.2.1",
     "axios": "^0.19.2",
-    "bcrypt": "^4.0.1",
-    "bcryptjs": "^2.4.3",
-    "body-parser": "^1.19.0",
-    "colors": "^1.4.0",
-    "dotenv": "^8.2.0",
-    "express": "^4.17.1",
-    "git": "^0.1.5",
-    "jsonwebtoken": "^8.5.1",
-    "mongodb": "^3.5.5",
-    "mongoose": "^5.9.6",
-    "path": "^0.12.7",
+    "create-react-class": "^15.6.3",
+    "number-to-words": "^1.2.4",
+    "react": "^16.13.0",
+    "react-bootstrap": "^1.0.0-beta.17",
+    "react-dnd": "^10.0.2",
+    "react-dnd-html5-backend": "^10.0.2",
+    "react-dom": "^16.13.0",
+    "react-drag-listview": "^0.1.6",
+    "react-draggable-list": "^4.0.3",
+    "react-dragula": "^1.1.17",
+    "react-js-pagination": "^3.0.3",
+    "react-loading-animation": "^1.4.0",
     "react-notifications-component": "^2.4.0",
-    "serve-static": "^1.14.1"
+    "react-remove-scroll-bar": "^2.1.0",
+    "react-router-dom": "^5.1.2",
+    "react-scripts": "3.4.0",
+    "react-sortable-hoc": "^1.11.0",
+    "react-sortablejs": "^2.0.11",
+    "sortablejs": "^1.6.1"
   },
-  "devDependencies": {
-    "concurrently": "^5.1.0",
-    "file-loader": "^6.0.0",
-    "nodemon": "^2.0.2",
-    "url-loader": "^4.0.0"
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
   },
-  "react": "next",
-  "react-dom": "next",
-  "homepage": "/"
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "homepage": ".",
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "main": "index.js",
+  "devDependencies": {},
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "proxy": "https://todo-react-abdul.herokuapp.com/"
 }

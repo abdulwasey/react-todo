@@ -1,12 +1,23 @@
-/tods/src/assets/treepic8.png
-/tods/src/assets/treepic7.png
-/tods/src/assets/treepic6.png
-/tods/src/assets/treepic4.png
-/tods/src/assets/treepic3.png
-/tods/src/assets/treepic2.png
-/tods/src/assets/stars-mountains-trees-colorful-minimalist-artwork-37.jpg
-/tods/src/assets/pixil-frame-0 (38).png
-/tods/src/assets/design-you-a-minimalist-wallpaper.jpg     
-/tods/src/assets/mountain-with-night-purple-sky-background_18047-35.jpg
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
 /node_modules
-/server
+/.pnp
+.pnp.js
+
+# testing
+/coverage
+
+# production
+/build
+
+# misc
+.DS_Store
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
