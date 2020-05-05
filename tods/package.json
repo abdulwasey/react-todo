@@ -55,5 +55,5 @@
   "author": "",
   "license": "ISC",
   "description": "",
-  "proxy": "http://localhost:5000/"
+  "proxy": "https://todo-react-abdul.herokuapp.com/"
 }
