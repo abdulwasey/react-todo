@@ -54,6 +54,5 @@
   "devDependencies": {},
   "author": "",
   "license": "ISC",
-  "description": "",
-  "proxy": "https://todo-server-abdul.herokuapp.com/"
+  "description": ""
 }
