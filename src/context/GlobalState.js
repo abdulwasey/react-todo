@@ -47,7 +47,7 @@ export const GlobalProvider = ({ children }) => {
       await axios.post("/api/user/register", user, config);
       store.addNotification({
         title: `I'll help you manage your work, ${user.firstname}`,
-        message: "Meet Billyjean inside",
+        message: "Registered",
         type: "success",
         insert: "top",
         container: "top-right",
@@ -84,7 +84,7 @@ export const GlobalProvider = ({ children }) => {
           props.history.push("/home");
         });
         store.addNotification({
-          title: "Jillybean has missed you :3",
+          title: "Your work has missed you :3",
           message: "Have you had a nice day yet?",
           type: "success",
           insert: "top",
@@ -97,7 +97,7 @@ export const GlobalProvider = ({ children }) => {
         });
       } else {
         store.addNotification({
-          title: "Walnuts are recommended",
+          title: "Donuts are recommended",
           message: res.data.msg,
           type: "danger",
           insert: "top",
