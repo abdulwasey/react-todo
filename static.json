@@ -1,3 +1,11 @@
 {
-    "proxy": "https://todo-server-abdul.herokuapp.com/"
+    "root": "build/",
+    "routes": {
+        "/**": "index.html"
+    },
+    "proxies": {
+        "/": {
+            "origin": "https://todo-server-abdul.herokuapp.com/"
+        }
+    }
 }
