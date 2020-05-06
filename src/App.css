@@ -12,6 +12,11 @@ body {
   background-color: black;
 }
 
+.stats {
+  color: brown;
+  font-size: 14px;
+}
+
 @font-face {
   font-family: "Disposable DroidBB";
   font-style: normal;
@@ -177,7 +182,7 @@ body {
   .home .chill {
     text-align: center;
     font-size: 1.3em;
-    top: 28%;
+    top: 34%;
     left: -15%;
     position: relative;
   }

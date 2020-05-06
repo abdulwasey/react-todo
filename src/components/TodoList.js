@@ -2,7 +2,7 @@
 import {
   SortableContainer,
   SortableHandle,
-  SortableElement
+  SortableElement,
 } from "react-sortable-hoc";
 import { Todo } from "./Todo";
 import { GlobalContext } from "../context/GlobalState";
@@ -67,10 +67,14 @@ export const SortableTodoList = () => {
             data-icon="mdi:meditation"
             data-inline="false"
           ></span>
-          <p className="stats">
+          <b>
             {" "}
-            Try meditating to procastinate your work. It helps you get them done faster.
-          </p>
+            <p className="stats">
+              {" "}
+              Try meditating to procastinate your work. It helps you get them
+              done faster.
+            </p>
+          </b>
         </div>
       )}
     </div>
