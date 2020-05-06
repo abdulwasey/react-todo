@@ -3,5 +3,9 @@
     "routes": {
         "/**": "index.html"
     },
-    "proxy": "https://todo-server-abdul.herokuapp.com/"
+    "proxies": {
+        "/api": {
+            "origin": "https://todo-server-abdul.herokuapp.com/api"
+        }
+    }
 }

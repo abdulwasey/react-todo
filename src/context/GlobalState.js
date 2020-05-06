@@ -44,10 +44,14 @@ export const GlobalProvider = ({ children }) => {
           "Content-type": "application/json",
         },
       };
-      await axios.post("/user/register", user, config);
+      await axios.post(
+        "https://todo-server-abdul.herokuapp.com/user/register",
+        user,
+        config
+      );
       store.addNotification({
         title: `I'll help you manage your work, ${user.firstname}`,
-        message: "Meet Billyjean inside",
+        message: "Nicee",
         type: "success",
         insert: "top",
         container: "top-right",
@@ -75,7 +79,11 @@ export const GlobalProvider = ({ children }) => {
 
     let usercred = { username: uname, password: pass };
     try {
-      const res = await axios.post("/user/login", usercred, config);
+      const res = await axios.post(
+        "https://todo-server-abdul.herokuapp.com/user/login",
+        usercred,
+        config
+      );
       localStorage.setItem("jwt", res.data.token);
 
       if (res.data.logged) {
@@ -138,7 +146,10 @@ export const GlobalProvider = ({ children }) => {
         },
       };
 
-      const res = await axios.get("/todos", config);
+      const res = await axios.get(
+        "https://todo-server-abdul.herokuapp.com/todos",
+        config
+      );
       dispatch({
         type: "GET_TODOS",
         todos: res.data.todos,
@@ -163,7 +174,11 @@ export const GlobalProvider = ({ children }) => {
     };
 
     try {
-      const res = await axios.post("/todos/", todo, config);
+      const res = await axios.post(
+        "https://todo-server-abdul.herokuapp.com/todos/",
+        todo,
+        config
+      );
       dispatch({
         type: "ADD_TODO",
         uid: uid,
@@ -186,7 +201,10 @@ export const GlobalProvider = ({ children }) => {
       },
     };
     try {
-      await axios.delete(`/todos/${id}`, config);
+      await axios.delete(
+        `https://todo-server-abdul.herokuapp.com/todos/${id}`,
+        config
+      );
 
       dispatch({
         type: "DELETE_TODO",
@@ -223,7 +241,11 @@ export const GlobalProvider = ({ children }) => {
       let impr = {
         imp: imp,
       };
-      let res = await axios.patch(`/todos/live/${tid}`, impr, config);
+      let res = await axios.patch(
+        `https://todo-server-abdul.herokuapp.com/todos/live/${tid}`,
+        impr,
+        config
+      );
       dispatch({
         type: "LIVE_SORT",
         tid: tid,
@@ -245,7 +267,11 @@ export const GlobalProvider = ({ children }) => {
           "x-auth-token": localStorage.getItem("jwt"),
         },
       };
-      const res = await axios.post(`/todos/${todo_id}`, content, config);
+      const res = await axios.post(
+        `https://todo-server-abdul.herokuapp.com/todos/${todo_id}`,
+        content,
+        config
+      );
 
       dispatch({
         type: "ADD_CONTENT",
@@ -269,7 +295,11 @@ export const GlobalProvider = ({ children }) => {
       };
 
       let s = "d";
-      const res = await axios.put(`/todos/${todo_id}`, s, config);
+      const res = await axios.put(
+        `https://todo-server-abdul.herokuapp.com/todos/${todo_id}`,
+        s,
+        config
+      );
 
       dispatch({
         type: "CHECKED",
@@ -296,7 +326,11 @@ export const GlobalProvider = ({ children }) => {
         task: editted,
       };
 
-      const res = await axios.patch(`todos/${tid}`, edittedTask, config);
+      const res = await axios.patch(
+        `https://todo-server-abdul.herokuapp.com/todos/${tid}`,
+        edittedTask,
+        config
+      );
       dispatch({
         type: "EDIT_TODO_TITLE",
         title: res.data.data,
@@ -317,7 +351,10 @@ export const GlobalProvider = ({ children }) => {
           "x-auth-token": localStorage.getItem("jwt"),
         },
       };
-      const res = await axios.delete(`/todos/${tidd}/${cid}`, config);
+      const res = await axios.delete(
+        `https://todo-server-abdul.herokuapp.com/todos/${tidd}/${cid}`,
+        config
+      );
       dispatch({
         type: "DELETE_CONTENT",
         payload: cid,
@@ -358,7 +395,11 @@ export const GlobalProvider = ({ children }) => {
         "x-auth-token": localStorage.getItem("jwt"),
       },
     };
-    await axios.post(`/todos/save`, { data: todosort, user: user }, config);
+    await axios.post(
+      `https://todo-server-abdul.herokuapp.com/todos/save`,
+      { data: todosort, user: user },
+      config
+    );
   }
 
   //return the ability to provide these functions and data to all the
