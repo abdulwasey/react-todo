@@ -39,22 +39,22 @@ export const Todo = ({ todo }) => {
   const { edit_todo_title } = useContext(GlobalContext);
   const [edittask, setedittask] = useState(todo.task);
 
-  const editTodo = e => {
+  const editTodo = (e) => {
     e.preventDefault();
     edit_todo_title(edittask, todo._id);
     setedittask(edittask);
     setb(false);
     store.addNotification({
       title: "Typo? Lol",
-      message: "Editted your todo",
+      message: "Edited your todo",
       type: "success",
       insert: "top",
       container: "top-right",
       animationIn: ["animated", "fadeIn"],
       animationOut: ["animated", "fadeOut"],
       dismiss: {
-        duration: 1000
-      }
+        duration: 1000,
+      },
     });
   };
   return (
@@ -99,7 +99,7 @@ export const Todo = ({ todo }) => {
         </div>
       </div>
       {y
-        ? todo.content.map(content => (
+        ? todo.content.map((content) => (
             <Content key={content._id} content={content} tid={todo._id} />
           ))
         : null}
@@ -111,7 +111,7 @@ export const Todo = ({ todo }) => {
               type="text"
               value={edittask}
               className="Editinput"
-              onChange={e => setedittask(e.target.value)}
+              onChange={(e) => setedittask(e.target.value)}
             />
             <div className="multiplybut">*</div>
           </div>

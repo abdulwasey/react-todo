@@ -87,7 +87,8 @@ body {
 }
 
 body {
-  background-image: url("./assets/mountains-2311699_1280.jpg");
+  background-image: url("./assets/1630412.jpg");
+  background-size: auto;
   background-repeat: no-repeat;
   background-color: black;
   background-position: 100% 0px;

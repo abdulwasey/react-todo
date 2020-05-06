@@ -17,12 +17,11 @@ import { SortableTodoList } from "./components/TodoList";
 
 //App
 function App() {
-  console.log("dasd",window.location.pathname)
   return (
     //calling a component - <Component/>
 
     <div>
-      <BRouter basename = "/" history={history}>
+      <BRouter basename="/" history={history}>
         <GlobalProvider>
           <ReactNotification />
           <div>
