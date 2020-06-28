@@ -1,5 +1,4 @@
-# react-todo
-# FULL STACK DEV 
+# React Todo App
 To be able to make a user, make the user log in, make the user crud objects linked with him, make the user log out with his data saved.
 
 # APPLICATION
